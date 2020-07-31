@@ -1,3 +1,18 @@
+.top-flex-container {
+    margin: 1%;
+    margin-bottom: 0%;
+    padding: 2% 20% 2% 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+    background-color: #FAB3A9;
+    /* background-color: #FAB3A9; */
+    align-items: center;
+    color: white;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -12,7 +27,8 @@
     margin: 2%;
     flex-direction: column;
     border-radius: 2px;
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-container{
@@ -22,4 +38,26 @@
 
 .plant-container {
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plant-container h3 {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 0.025em;
+    justify-self: center;
+    align-self: center;
+}
+
+.plant-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.01em;
+}
+
+.plant-container span {
+    font-weight: 700;
+    font-size: 1.1em;
+
 }

@@ -1,8 +1,7 @@
 .header-custom {
-    background-color: rgb(116, 72, 52);
+    background-color: #7FB285;
     align-items: center;
     padding: 1%;
-    border-bottom: 1px solid black;
 }
 
 .header-brand {
@@ -20,7 +19,7 @@
     letter-spacing: 0.1em;
     width: 150px;
     border-radius: 4px;
-    background-color: rgb(8, 100, 0);
+    background-color: #463239;
     border: 2px solid black;
     box-shadow: 1px 1px black;
     color: white;

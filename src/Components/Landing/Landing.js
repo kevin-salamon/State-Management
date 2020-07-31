@@ -33,10 +33,10 @@ class Landing extends Component {
                 </div>
                 <div key={plant.id} className="plant-container">
                     <h3>{plant.name}</h3>
-                    <p>You planted this on {plant.plantDate}</p>
-                    <p>This plant takes {plant.growTime} days to grow, on average</p>
-                    <p>Ideal water per week: {plant.idealWater} inches</p>
-                    <p>Ideal sun: {plant.idealSun}</p>
+                    <p><span>You planted on:</span> {plant.plantDate}</p>
+                    <p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>
+                    <p><span>Ideal water per week:</span> {plant.idealWater} inches</p>
+                    <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
                 </div>
             </div>
         ))
@@ -44,7 +44,7 @@ class Landing extends Component {
         return(
             <>
             <Header />
-            <h1>Landing</h1>
+            <h1 className="top-flex-container">Welcome back! Here are the crops you've planted.</h1>
 
             <div className="flex-container">
                 {plantItems}
