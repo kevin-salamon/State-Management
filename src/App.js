@@ -14,6 +14,7 @@ function App() {
         <Provider store={store}>
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Route exact path="/State-Management" component={Landing} />
             <Route exact path="/table" component={Table} />
             <Route exact path="/chart" component={Chart} />
           </Switch>
