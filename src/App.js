@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Landing from './Components/Landing';
-import Table from './Components/Table';
-import Chart from './Components/Chart/Chart';
+import Landing from './components/Landing/Landing';
+import Table from './components/Table/Table';
+import Chart from './components/Chart/Chart';
 import { Provider } from 'react-redux';
 
 import store from './store';

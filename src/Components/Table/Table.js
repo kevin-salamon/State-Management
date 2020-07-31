@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import Header from './reusables/Header';
+import Header from '../reusables/Header';
 
-class Landing extends Component {
+class Table extends Component {
 
     render() {
         return(
             <>
             <Header />
-            <h1>Landing</h1>
+            <h1>Table</h1>
             </>
         );
     }
 
 }
 
-export default Landing;
+export default Table;

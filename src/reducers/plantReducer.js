@@ -11,13 +11,13 @@ export default function(state = initialState, action) {
             console.log("reducer");
             return {
                 ...state,
-                items: action.payload
+                plants: action.payload
             }
         case NEW_PLANT:
             console.log("reducer");
             return {
                 ...state,
-                item: action.payload
+                plant: action.payload
             }
         default:
             return state; 
