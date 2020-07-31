@@ -20,8 +20,8 @@ class Landing extends Component {
 
         const plantItems = this.props.plants.map(plant => (
             <div key={plant.id}>
-                <h3>{plant.title}</h3>
-                <p>{plant.body}</p>
+                <h3>{plant.name}</h3>
+                <p>{plant.idealWater}</p>
             </div>
         ))
 

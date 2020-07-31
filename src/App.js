@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-function App() {  // I believe the provider is placed correctly here, but I could be wrong.
+function App() { 
   return (
     <Router>
       <React.Fragment>

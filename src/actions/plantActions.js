@@ -2,7 +2,7 @@ import { FETCH_PLANTS, NEW_PLANT } from './types';
 
 export const fetchPlants = () => dispatch => {
     console.log("fetching...");
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(null)
         .then(res => res.json())
         .then(plants => 
             dispatch({

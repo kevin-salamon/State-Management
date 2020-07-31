@@ -1,7 +1,8 @@
 import { FETCH_PLANTS, NEW_PLANT } from '../actions/types';
+import initialStateJSON from '../initialState.json';
 
 const initialState = {
-    plants: [],
+    plants: initialStateJSON,
     plant: {}
 }
 
