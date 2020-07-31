@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPlants } from '../../actions/plantActions';
 import Header from '../reusables/Header';
+import './landingstyle.css';
 
 class Landing extends Component {
 
-    componentDidMount() {
-        this.props.fetchPlants();
-    }
+    // componentDidMount() {
+    //     this.props.fetchPlants();
+    // }
 
     componentDidUpdate(nextProps) {
         if(nextProps.newPlant) {
@@ -19,9 +20,24 @@ class Landing extends Component {
     render() {
 
         const plantItems = this.props.plants.map(plant => (
-            <div key={plant.id}>
-                <h3>{plant.name}</h3>
-                <p>{plant.idealWater}</p>
+            <div className="plant-flex-container">
+                <div className="image-container" style={{background: `linear-gradient(
+                        rgba(0, 0, 0, 0.0),
+                        rgba(0, 0, 0, 0.0)
+                    ), url(${plant.picture}) center`,
+                    WebkitBackgroundSize: "cover",
+                    MozBackgroundSize: "cover",
+                    OBackgroundSize: "cover",
+                    backgroundSize: "cover"
+                    }}>
+                </div>
+                <div key={plant.id} className="plant-container">
+                    <h3>{plant.name}</h3>
+                    <p>You planted this on {plant.plantDate}</p>
+                    <p>This plant takes {plant.growTime} days to grow, on average</p>
+                    <p>Ideal water per week: {plant.idealWater} inches</p>
+                    <p>Ideal sun: {plant.idealSun}</p>
+                </div>
             </div>
         ))
 
@@ -30,8 +46,7 @@ class Landing extends Component {
             <Header />
             <h1>Landing</h1>
 
-            <div>
-                <h1>Plants</h1>
+            <div className="flex-container">
                 {plantItems}
             </div>
             </>

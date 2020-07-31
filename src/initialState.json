@@ -5,7 +5,8 @@
         "plantDate": "4/30",
         "growTime": "60",
         "idealWater": "1.5",
-        "idealSun": "Full"
+        "idealSun": "Full",
+        "picture": "https://ychef.files.bbci.co.uk/976x549/p04w46sp.jpg"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "plantDate": "5/15",
         "growTime": "80",
         "idealWater": "1.0",
-        "idealSun": "Full"
+        "idealSun": "Full",
+        "picture": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=4320&h=2262&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F840195.jpg"
     },
     {
         "id": 3,
@@ -21,6 +23,7 @@
         "plantDate": "5/15",
         "growTime": "60",
         "idealWater": "1.5",
-        "idealSun": "Full"
+        "idealSun": "Full",
+        "picture": "https://www.healthline.com/hlcmsresource/images/AN_images/AN88-Cucumbers-732x549-thumb.jpg"
     }
 ]
