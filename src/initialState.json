@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Tomatoes",
+        "plantDate": "4/30",
+        "growTime": "60",
+        "idealWater": "1.5",
+        "idealSun": "Full"
+    },
+    {
+        "id": 2,
+        "name": "Corn",
+        "plantDate": "5/15",
+        "growTime": "80",
+        "idealWater": "1.0",
+        "idealSun": "Full"
+    },
+    {
+        "id": 3,
+        "name": "Cucumbers",
+        "plantDate": "5/15",
+        "growTime": "60",
+        "idealWater": "1.5",
+        "idealSun": "Full"
+    }
+]
