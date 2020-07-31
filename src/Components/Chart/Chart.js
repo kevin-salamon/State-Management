@@ -48,7 +48,6 @@ class Chart extends Component {
             <>
             <Header />
             <div>
-                <h1>Chart</h1>
                 <div className="chart-container">
                     {barChart}
                 </div>
