@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchPlants } from '../../actions/plantActions';
+import { fetchPlants, deletePlant } from '../../actions/plantActions';
 import Header from '../reusables/Header';
 import './landingstyle.css';
 
 class Landing extends Component {
 
-    // componentDidMount() {
-    //     this.props.fetchPlants();
-    // }
+    componentDidMount() {  
+        this.props.fetchPlants();  
+      }  
 
     // componentDidUpdate(nextProps) {
     //     if(nextProps.newPlant) {
@@ -37,7 +37,7 @@ class Landing extends Component {
                     <p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>
                     <p><span>Ideal water per week:</span> {plant.idealWater} inches</p>
                     <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
-                    <button>Delete Plant</button>
+                    <button onClick={() => this.props.deletePlant(plant.id)}>Delete Plant</button>
                     <button>Edit Plant</button>
                 </div>
             </div>
@@ -59,13 +59,12 @@ class Landing extends Component {
 
 Landing.propTypes = {
     fetchPlants: PropTypes.func.isRequired,
+    deletePlant: PropTypes.func.isRequired,
     plants: PropTypes.array.isRequired,
-    newPlant: PropTypes.object
 }
 
 const mapStateToProps = state => ({
     plants: state.plants.plants,
-    newPlant: state.plants.plant
 });
 
-export default connect(mapStateToProps, { fetchPlants })(Landing);
+export default connect(mapStateToProps, { fetchPlants, deletePlant })(Landing);
