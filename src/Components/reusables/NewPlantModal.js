@@ -6,6 +6,7 @@ import { createPlant } from '../../actions/plantActions';
 import './modalstyle.css';
 
 const NewPlantModal = () => {
+    
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -32,7 +33,7 @@ const NewPlantModal = () => {
         };
 
         console.log(`Adding plant to state: ${newPlant.name}`);
-        this.props.createPlant(newPlant)
+        createPlant(newPlant)
         
         handleClose();
     }

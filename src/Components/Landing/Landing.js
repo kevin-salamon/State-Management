@@ -46,7 +46,7 @@ class Landing extends Component {
         return(
             <>
             <Header />
-            <h1 className="top-flex-container">Welcome back! Here are the crops you've planted.</h1>
+            <h1 className="top-flex-container">Welcome back! Here are the crops you've planted...</h1>
 
             <div className="flex-container">
                 {plantItems}

@@ -7,7 +7,7 @@ function Header() {
     return(
         <nav className="nav header-custom">
             <div className="header-brand">
-                <span style={{fontFamily: "'Lexend Zetta', sans-serif"}}>data</span><span style={{fontFamily: "'Bebas Neue', cursive"}}> Garden</span>
+                <h1>datagarden</h1>
             </div>
             <Link to="/" className="link-box">
             <button className="header-button">Home</button>

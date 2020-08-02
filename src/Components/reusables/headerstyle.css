@@ -5,8 +5,8 @@
 }
 
 .header-brand {
-    font-size: 2em;
     color: white;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .link-box {
@@ -23,5 +23,5 @@
     border: 2px solid black;
     box-shadow: 1px 1px black;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Abril Fatface', cursive;
 }
