@@ -1,0 +1,35 @@
+.header-button {
+    font-size: 1.0rem;
+    font-weight: 550;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+}
+
+.header-button-add {
+    font-size: 1.5rem;
+    font-weight: 550;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+label {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.input {
+    font-family: 'Lusitana', serif;
+    width: 80%;
+    height: 40px;
+    border-radius: 2px;
+    border-color: rgb(143, 143, 143);
+}

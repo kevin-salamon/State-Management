@@ -37,6 +37,8 @@ class Landing extends Component {
                     <p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>
                     <p><span>Ideal water per week:</span> {plant.idealWater} inches</p>
                     <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
+                    <button>Delete Plant</button>
+                    <button>Edit Plant</button>
                 </div>
             </div>
         ))

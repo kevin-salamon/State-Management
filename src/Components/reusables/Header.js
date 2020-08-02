@@ -1,6 +1,7 @@
 import React from 'react'
 import './headerstyle.css';
 import { Link } from "react-router-dom";
+import NewPlantModal from './NewPlantModal';
 
 function Header() {
     return(
@@ -17,6 +18,7 @@ function Header() {
             <Link to="/chart" className="link-box">
             <button className="header-button">Chart</button>
             </Link>
+            <NewPlantModal />
         </nav>
     );
 }
