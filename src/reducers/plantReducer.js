@@ -17,8 +17,7 @@ export default function(state = initialState, action) {
         case NEW_PLANT:
             console.log("reducer");
             return {
-                ...state,
-                plant: action.payload
+                state
             }
         default:
             return state; 

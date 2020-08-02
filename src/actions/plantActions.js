@@ -12,7 +12,7 @@ export const fetchPlants = () => dispatch => {
         );
 }
 
-export const createPost = (plantData) => dispatch => {
+export const createPlant = (plantData) => dispatch => {
     console.log("adding...");
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
