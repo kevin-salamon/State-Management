@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createPlant } from '../../actions/plantActions';
 import './modalstyle.css';
 
-function NewPlantModal() {
+const NewPlantModal = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -29,7 +32,7 @@ function NewPlantModal() {
         };
 
         console.log(`Adding plant to state: ${newPlant.name}`);
-        // POST TO STATE (its probably this.props.createPlant)
+        this.props.createPlant(newPlant)
         
         handleClose();
     }
@@ -125,4 +128,8 @@ function NewPlantModal() {
     );
 }
 
-export default NewPlantModal;
+NewPlantModal.propTypes = {
+    createPlant: PropTypes.func.isRequired
+}
+
+export default connect(null, { createPlant })(NewPlantModal);
