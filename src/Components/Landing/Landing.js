@@ -11,11 +11,11 @@ class Landing extends Component {
     //     this.props.fetchPlants();
     // }
 
-    componentDidUpdate(nextProps) {
-        if(nextProps.newPlant) {
-            this.props.plants.unshift(nextProps.newPlant);
-        }
-    }
+    // componentDidUpdate(nextProps) {
+    //     if(nextProps.newPlant) {
+    //         this.props.plants.unshift(nextProps.newPlant);
+    //     }
+    // }
 
     render() {
 
