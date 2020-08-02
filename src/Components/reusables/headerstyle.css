@@ -1,4 +1,6 @@
 .header-custom {
+    display: flex;
+    flex-direction: row;
     background-color: #7FB285;
     align-items: center;
     padding: 1%;
@@ -9,9 +11,22 @@
     font-family: 'Permanent Marker', cursive;
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    margin: 0% 3%;
+    justify-content: center;
+}
+
 .link-box {
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 0% 1%;
+}
+
+.storage {
+    display: flex;
+    flex-direction: row;
+    margin: 0% 3%;
+    justify-content: center;
 }
 
 .header-button {

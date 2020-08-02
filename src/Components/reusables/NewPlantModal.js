@@ -40,7 +40,7 @@ const NewPlantModal = () => {
 
     return (
         <>
-            <button className="btn header-button-add" style={{margin: "0 auto", backgroundColor: "#463239", color: "white"}} onClick={handleShow}>
+            <button className="btn header-button-add" style={{backgroundColor: "#463239", color: "white"}} onClick={handleShow}>
                 Add Plant
             </button>
 

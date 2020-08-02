@@ -9,15 +9,21 @@ function Header() {
             <div className="header-brand">
                 <h1>datagarden</h1>
             </div>
-            <Link to="/" className="link-box">
-            <button className="header-button">Home</button>
-            </Link>
-            <Link to="/table" className="link-box">
-            <button className="header-button">Table</button>
-            </Link>
-            <Link to="/chart" className="link-box">
-            <button className="header-button">Chart</button>
-            </Link>
+            <div className="links">
+                <Link to="/" className="link-box">
+                <button className="header-button">Home</button>
+                </Link>
+                <Link to="/table" className="link-box">
+                <button className="header-button">Table</button>
+                </Link>
+                <Link to="/chart" className="link-box">
+                <button className="header-button">Chart</button>
+                </Link>
+            </div>
+            <div className="storage">
+                <button className="header-button">Save Plants</button>
+                <button className="header-button">Load Plants</button>
+            </div>
             <NewPlantModal />
         </nav>
     );

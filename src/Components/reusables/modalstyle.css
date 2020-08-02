@@ -17,7 +17,8 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Abril Fatface', cursive;  
+    font-family: 'Abril Fatface', cursive;
+    border: 2px solid black;
 }
 
 label {
