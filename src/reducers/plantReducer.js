@@ -21,7 +21,14 @@ export default function(state = initialState, action) {
             return {    
                 ...state,    
                 plants: state.plants.map(    
-                    (content, i) => content.id === action.payload.id ? {...content, employeeName : action.payload.employeeName ,  employeeDepartment : action.payload.employeeDepartment } : content)    
+                    (content, i) => content.id === action.payload.id ? {...content,
+                        id: action.payload.id, 
+                        name: action.payload.name, 
+                        plantDate : action.payload.plantDate, 
+                        growTime: action.payload.growTime, 
+                        idealWater: action.payload.idealWater, 
+                        idealSun: action.payload.idealSun, 
+                        picture: action.payload.picture } : content)    
             };    
         case DELETE_PLANT:    
             return {    
