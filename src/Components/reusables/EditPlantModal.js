@@ -7,16 +7,20 @@ import './modalstyle.css';
 
 class EditPlantModal extends Component {
     
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
+
+        const propIdRender = this.props.id; // this is where we drilled the id props from Landing
+        const plantItem = this.props.plants.find(plant => plant.id === propIdRender);
+
         this.state = {
             showHide : false,
-            name: "",
-            plantDate: "",
-            growTime: "",
-            idealWater: "",
-            idealSun: "",
-            picture: ""
+            name: plantItem.name,
+            plantDate: plantItem.plantDate,
+            growTime: plantItem.growTime,
+            idealWater: plantItem.idealWater,
+            idealSun: plantItem.idealSun,
+            picture: plantItem.picture
         }
 
     }
@@ -35,7 +39,7 @@ class EditPlantModal extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const propsId = this.props.id;
+        const propsId = this.props.id; // same as line 13
         const editedPlant = {
             id: propsId,
             name: this.state.name,
@@ -53,9 +57,6 @@ class EditPlantModal extends Component {
     }
 
     render() {
-
-        const propIdRender = this.props.id;
-        const plantItem = this.props.plants.find(plant => plant.id === propIdRender);
 
         return (
             <>
@@ -77,17 +78,18 @@ class EditPlantModal extends Component {
                                     value={this.state.name}
                                     type="text"
                                     name="name"
-                                    placeholder={plantItem.name}
+                                    placeholder="name"
                                 />
                             </div>
                             <div className="form-group text-center">
                                 <label>Planting Date: </label><br/>
                                 <input
                                     className="input"
-                                    value={this.state.name}
+                                    onChange={this.onChange}
+                                    value={this.state.plantDate}
                                     type="text"
                                     name="plantDate"
-                                    placeholder={plantItem.plantDate}
+                                    placeholder="Planting Date"
                                 />
                             </div>
                             <div className="form-group text-center">
@@ -98,29 +100,29 @@ class EditPlantModal extends Component {
                                     value={this.state.growTime}
                                     type="text"
                                     name="growTime"
-                                    placeholder={plantItem.growTime}
+                                    placeholder="Days to Harvest"
                                 />
                             </div>
                             <div className="form-group text-center">
-                                <label>Ideal Water: </label><br/>
+                                <label>Ideal Water (inches): </label><br/>
                                 <input
                                     className="input"
                                     onChange={this.onChange}
                                     value={this.state.idealWater}
                                     name="idealWater"
                                     type="text"
-                                    placeholder={plantItem.idealWater}
+                                    placeholder="Water per week in inches"
                                 />
                             </div>
                             <div className="form-group text-center">
-                                <label>Ideal Sun: </label><br/>
+                                <label>Ideal Sun Exposure: </label><br/>
                                 <input
                                     className="input"
                                     onChange={this.onChange}
                                     value={this.state.idealSun}
                                     type="text"
                                     name="idealSun"
-                                    placeholder={plantItem.idealSun}
+                                    placeholder="Ideal sun exposure"
                                 />
                             </div>
                             <div className="form-group text-center">
@@ -133,7 +135,7 @@ class EditPlantModal extends Component {
                                     value={this.state.picture}
                                     name="picture"
                                     type="text"
-                                    placeholder={plantItem.picture}
+                                    placeholder="Full link"
                                 />
                             </div>
                         </form>
