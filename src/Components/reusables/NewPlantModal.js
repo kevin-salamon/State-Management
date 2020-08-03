@@ -7,9 +7,6 @@ import './modalstyle.css';
 
 class NewPlantModal extends Component {
     
-    // const [show, setShow] = useState(false);
-
-    
     constructor(){
         super();
         this.state = {
@@ -21,18 +18,7 @@ class NewPlantModal extends Component {
         this.setState({ showHide: !this.state.showHide })
     }
 
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
-
-    // const idRef = useRef();
-    // const nameRef = useRef();
-    // const dateRef = useRef();
-    // const growRef = useRef();
-    // const waterRef = useRef();
-    // const sunRef = useRef();
-    // const pictureRef = useRef();
-
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault();
         const newPlant = {
             id: this.getId.value,
@@ -45,7 +31,7 @@ class NewPlantModal extends Component {
         };
 
         console.log(`Adding plant to state: ${newPlant.name}`);
-        createPlant(newPlant)
+        createPlant(newPlant);
         
         this.setState({ showHide: false });
     }
