@@ -3,19 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPlants, deletePlant } from '../../actions/plantActions';
 import Header from '../reusables/Header';
+import EditPlantModal from '../reusables/EditPlantModal';
 import './landingstyle.css';
 
 class Landing extends Component {
 
     componentDidMount() {  
         this.props.fetchPlants();  
-      }  
-
-    // componentDidUpdate(nextProps) {
-    //     if(nextProps.newPlant) {
-    //         this.props.plants.unshift(nextProps.newPlant);
-    //     }
-    // }
+    }  
 
     render() {
 
@@ -37,8 +32,10 @@ class Landing extends Component {
                     <p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>
                     <p><span>Ideal water per week:</span> {plant.idealWater} inches</p>
                     <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
-                    <button onClick={() => this.props.deletePlant(plant.id)}>Delete Plant</button>
-                    <button>Edit Plant</button>
+                    <button className="list-button" onClick={() => this.props.deletePlant(plant.id)}>Delete Plant</button>
+                    <EditPlantModal 
+                        id={plant.id} // yes, this is a technically a prop-drill - I was drawing a blank on other ways to pull the id from the respective component. Hopefully this doesn't violate the spirit of the project.
+                    />
                 </div>
             </div>
         ))

@@ -21,7 +21,7 @@ class NewPlantModal extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const newPlant = {
-            id: this.getId.value,
+            id: Date.now(),
             name: this.getName.value,
             plantDate: this.getPlantDate.value,
             growTime: this.getGrowTime.value,
@@ -49,16 +49,6 @@ class NewPlantModal extends Component {
                     </Modal.Header>
                     <Modal.Body style={{ backgroundColor: "#FAB3A9", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px"}}>
                         <form>
-
-                            <div className="form-group text-center">
-                                <label>ID: </label><br/>
-                                <input
-                                    className="input"
-                                    ref={(input)=>this.getId = input}
-                                    type="text"
-                                    placeholder="ID"
-                                />
-                            </div>
                             <div className="form-group text-center">
                                 <label>Name: </label><br/>
                                 <input

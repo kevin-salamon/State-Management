@@ -21,11 +21,25 @@
     border: 2px solid black;
 }
 
+.list-button {
+    font-size: 1.5rem;
+    font-weight: 550;
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Abril Fatface', cursive;
+    border: 2px solid black;  
+    margin: 2px;
+}
+
 label {
-    color: white;
+    color: #463239;
     font-family: 'Roboto Slab', serif;
     font-size: 18px;
     font-weight: 500;
+    text-shadow: 1px 1px white;
 }
 
 .input {

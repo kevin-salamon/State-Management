@@ -71,3 +71,17 @@
     font-size: 1.1em;
 
 }
+
+.list-button {
+    font-size: 1.5rem;
+    font-weight: 550;
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Abril Fatface', cursive;
+    border: 2px solid black;
+    background-color: #463239;
+    color: white;
+}
