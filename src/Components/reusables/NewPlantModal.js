@@ -31,7 +31,7 @@ class NewPlantModal extends Component {
         };
 
         console.log(`Adding plant to state: ${newPlant.name}`);
-        createPlant(newPlant);
+        this.props.createPlant(newPlant);
         
         this.setState({ showHide: false });
     }
