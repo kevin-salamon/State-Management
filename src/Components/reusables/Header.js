@@ -24,8 +24,8 @@ class Header extends Component {
             picture: ${plant.picture}
             }`   
         )}]`);
-        // const test = localStorage.getItem(`state`);
-        // console.log(test);
+        const test = localStorage.getItem(`state`);
+        console.log(test);
     }
 
     render() {

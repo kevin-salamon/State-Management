@@ -37,7 +37,7 @@
     border-radius: 4px;
     background-color: #463239;
     border: 2px solid black;
-    box-shadow: 1px 1px black;
+    /* box-shadow: 1px 1px black; */
     color: white;
     font-family: 'Abril Fatface', cursive;
 }

@@ -1,0 +1,28 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 2% 10%;
+}
+
+table {
+    border: 1px solid #463239;
+}
+
+td {
+    height: 70px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    th {
+        font-size: 0.7em;
+    }
+    
+    td {
+        font-size: 0.7em;
+    }
+}
