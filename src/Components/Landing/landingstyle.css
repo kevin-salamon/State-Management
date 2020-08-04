@@ -12,7 +12,7 @@
     color: white;
     font-family: 'Abril Fatface', cursive;
     font-size: 2.0em;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 2px black;
     font-weight: 600;
 }
 
@@ -33,14 +33,14 @@
     justify-content: center;
     align-items: center;
     background-color: #FAB3A9;
-    border: 3px solid #463239;
+    border: 1px solid rgb(153, 153, 153);
     border-radius: 12px;
 }
 
 .image-container{
     width: 100%;
     height: 60%;
-    border-bottom: 3px solid #463239;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .plant-container {
@@ -49,7 +49,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: whitesmoke;
-    border: 2px solid #463239;
+    border: 1px solid rgb(153, 153, 153);
     border-bottom: none;
     border-top: none;
 }
