@@ -11,11 +11,11 @@ class Table extends Component {
         return(
             <>
             <Header />
+            <h1 className="top-flex-container">Quick Reference Table</h1>
             <div className="table-container">
                 <table className="table">
                     <thead className="thead-dark">
                         <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Plant Date</th>
                         <th scope="col">Days to Harvest</th>
@@ -26,8 +26,7 @@ class Table extends Component {
                     <tbody>
                         {this.props.plants.map(plant => (
                             <tr>
-                                <th scope="row">{plant.id}</th>
-                                    <td>{plant.name}</td>
+                                <th scope="row">{plant.name}</th>
                                     <td>{plant.plantDate}</td>
                                     <td>{plant.growTime}</td>
                                     <td>{plant.idealWater}</td>
