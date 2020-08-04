@@ -34,7 +34,7 @@ class Landing extends Component {
                     <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
                     <button className="list-button" onClick={() => this.props.deletePlant(plant.id)}>Delete Plant</button>
                     <EditPlantModal 
-                        id={plant.id} // yes, this is a technically a prop-drill - I was drawing a blank on other ways to pull the id from the respective component. Hopefully this doesn't violate the spirit of the project.
+                        id={plant.id} // yes, this is a technically a prop-drill - I was drawing a blank on other ways to push the id to the respective component. Hopefully this doesn't violate the spirit of the project.
                     />
                 </div>
             </div>

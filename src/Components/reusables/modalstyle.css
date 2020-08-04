@@ -19,6 +19,7 @@
     align-items: center; 
     font-family: 'Abril Fatface', cursive;
     border: 2px solid black;
+    margin: 0 auto;
 }
 
 .list-button {
@@ -48,4 +49,13 @@ label {
     height: 40px;
     border-radius: 2px;
     border-color: rgb(143, 143, 143);
+}
+
+@media screen and (max-width: 559px) {
+
+    .header-button-add {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    
 }

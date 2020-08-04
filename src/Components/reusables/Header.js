@@ -26,7 +26,6 @@ class Header extends Component {
         )}]`);
         // const test = localStorage.getItem(`state`);
         // console.log(test);
-        //test
     }
 
     render() {
@@ -37,10 +36,10 @@ class Header extends Component {
                 </div>
                 <div className="links">
                     <Link to="/" className="link-box">
-                    <button className="header-button">Home</button>
+                    <   button className="header-button">Home</button>
                     </Link>
                     <Link to="/table" className="link-box">
-                    <button className="header-button">Table</button>
+                        <button className="header-button">Table</button>
                     </Link>
                     <Link to="/chart" className="link-box">
                     <button className="header-button">Chart</button>

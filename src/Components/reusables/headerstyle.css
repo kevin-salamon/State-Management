@@ -32,6 +32,7 @@
 .header-button {
     font-size: 1.25em;
     letter-spacing: 0.1em;
+    height: 60px;
     width: 150px;
     border-radius: 4px;
     background-color: #463239;
@@ -39,4 +40,22 @@
     box-shadow: 1px 1px black;
     color: white;
     font-family: 'Abril Fatface', cursive;
+}
+
+@media screen and (max-width: 559px) {
+
+    .links, .storage {
+        margin-bottom: 1%;
+        margin-top: 1%;
+        justify-content: center;
+    }
+
+    .header-custom {
+        justify-content: center;
+    }
+
+    .header-button {
+        height: 40px;
+    }
+    
 }
