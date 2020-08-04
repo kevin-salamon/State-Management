@@ -25,5 +25,32 @@
         "idealWater": "1.5",
         "idealSun": "Full",
         "picture": "https://www.healthline.com/hlcmsresource/images/AN_images/AN88-Cucumbers-732x549-thumb.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Carrots",
+        "plantDate": "4/30",
+        "growTime": "80",
+        "idealWater": "1.0",
+        "idealSun": "Full",
+        "picture": "https://ucarecdn.com/459eb7be-115a-4d85-b1d8-deaabc94c643/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+    },
+    {
+        "id": 5,
+        "name": "Peas",
+        "plantDate": "3/15",
+        "growTime": "75",
+        "idealWater": "1.0",
+        "idealSun": "Full",
+        "picture": "https://i.dailymail.co.uk/i/newpix/2018/05/17/12/4C5A88A300000578-0-image-a-14_1526556707155.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Broccoli",
+        "plantDate": "8/15",
+        "growTime": "125",
+        "idealWater": "1.5",
+        "idealSun": "Full",
+        "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-broccoli-royalty-free-image-571248799-1532377854.jpg?crop=1.00xw:0.669xh;0,0.0641xh&resize=1200:*"
     }
 ]
