@@ -26,6 +26,7 @@ class Header extends Component {
         )}]`);
         // const test = localStorage.getItem(`state`);
         // console.log(test);
+        //test
     }
 
     render() {
