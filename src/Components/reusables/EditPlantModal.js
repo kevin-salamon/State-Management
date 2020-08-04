@@ -22,7 +22,6 @@ class EditPlantModal extends Component {
             idealSun: plantItem.idealSun,
             picture: plantItem.picture
         }
-
     }
 
     onChange = (event) => {

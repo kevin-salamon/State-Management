@@ -10,7 +10,7 @@ class Landing extends Component {
 
     componentDidMount() {  
         this.props.fetchPlants();  
-    }  
+    }
 
     render() {
 
