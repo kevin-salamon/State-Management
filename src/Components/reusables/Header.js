@@ -13,7 +13,19 @@ class Header extends Component {
     }
 
     saveStorage = () => {
-        localStorage.setItem(`test`, "reviewed");
+        localStorage.setItem(`state`, `[${this.props.plants.map((plant) => 
+            `{
+            id: ${plant.id},
+            name: ${plant.name},
+            plantDate: ${plant.plantDate},
+            growTime: ${plant.growTime},
+            idealWater: ${plant.idealWater},
+            idealSun: ${plant.idealSun},
+            picture: ${plant.picture}
+            }`   
+        )}]`);
+        // const test = localStorage.getItem(`state`);
+        // console.log(test);
     }
 
     render() {
