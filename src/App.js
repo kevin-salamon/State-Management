@@ -9,7 +9,7 @@ import store from './store';
 
 function App() { 
   return (
-    <HashRouter basename='/'>
+    <HashRouter basename='/State-Management'>
       <React.Fragment>
         <Provider store={store}>
           <Switch>
