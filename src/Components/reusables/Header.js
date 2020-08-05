@@ -14,17 +14,14 @@ class Header extends Component {
 
     saveStorage = () => {
         const JSONstate = JSON.stringify(this.props.plants);
-
         console.log(JSONstate);
-
         localStorage.setItem(`state`, JSONstate);
     }
 
     loadStorage = () => {
-        const data = localStorage.getItem(`state`);
-        const JSONData = JSON.parse(data);
-        console.log(JSONData);
-        this.props.loadPlants(JSONData);
+        const data = JSON.parse(localStorage.getItem(`state`));
+        console.log(data);
+        this.props.loadPlants(data);
     }
 
     render() {
