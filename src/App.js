@@ -9,14 +9,13 @@ import store from './store';
 
 function App() { 
   return (
-    <HashRouter basename="/">
+    <HashRouter basename='/'>
       <React.Fragment>
         <Provider store={store}>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route exact path="/State-Management" component={Landing} />
-            <Route exact path="/table" component={Table} />
-            <Route exact path="/chart" component={Chart} />
+            <Route path="/table" component={Table} />
+            <Route path="/chart" component={Chart} />
           </Switch>
         </Provider>
       </React.Fragment>
