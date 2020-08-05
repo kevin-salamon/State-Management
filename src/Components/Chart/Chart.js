@@ -20,8 +20,9 @@ class Chart extends Component {
                             label: 'Days',
                             backgroundColor: '#FAB3A9',
                             data: this.props.plants.map(plant => plant.growTime),
-                            fill: true,
-                            barPercentage: 0.5                       
+                            barPercentage: 0.5,
+                            borderColor: '#ec6553',
+                            borderWidth: 2       
                         }]
     
                     }}
