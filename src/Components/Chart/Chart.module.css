@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+}
+
+.top {
+    margin: 1%;
+    margin-bottom: 0%;
+    padding: 2% 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+    background-color: #ec6553;
+    align-items: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.0em;
+    text-shadow: 2px 1px black;
+    font-weight: 600;
+}

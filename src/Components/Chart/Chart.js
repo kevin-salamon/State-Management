@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Header from '../reusables/Header';
-import { Bar } from 'react-chartjs-2';
+import { HorizontalBar } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPlants } from '../../actions/plantActions';
-import './chartstyle.css';
+import styles from './Chart.module.css';
+// import './chartstyle.css';
 
 class Chart extends Component {
 
@@ -12,14 +13,15 @@ class Chart extends Component {
 
         
         const barChart = 
-                <Bar
-                    type = 'horizontalBar'
+                <HorizontalBar
                     data = {{
                         labels: this.props.plants.map(plant => plant.name),
                         datasets: [{
                             label: 'Days',
-                            backgroundColor: 'lightblue',
-                            data: this.props.plants.map(plant => plant.growTime)
+                            backgroundColor: '#FAB3A9',
+                            data: this.props.plants.map(plant => plant.growTime),
+                            fill: true,
+                            barPercentage: 0.5                       
                         }]
     
                     }}
@@ -29,26 +31,31 @@ class Chart extends Component {
                           text:'Days from planting to harvest',
                           fontSize: 20
                         },
+                        layout: {
+                            padding: 20
+                        },
                         scales: {
-                            yAxes: [{
+                            xAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
                                 }
                             }]
                         },
                         responsive: true,
+                        maintainAspectRatio: false,
                         legend:{
-                          display:true,
-                          position:'right'
-                        }
+                          fullWidth: true
+                        },
+                        
                     }}
                 />;
 
         return(
             <>
             <Header />
+            <h1 className={styles.top}>Chart of Growing Times</h1>
             <div>
-                <div className="chart-container">
+                <div className={styles.container}>
                     {barChart}
                 </div>
             </div>
