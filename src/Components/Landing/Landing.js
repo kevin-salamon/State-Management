@@ -27,11 +27,11 @@ class Landing extends Component {
                     }}>
                 </div>
                 <div key={plant.id} className="plant-container">
-                    <h3>{plant.name}</h3>
-                    <p><span>You planted on:</span> {plant.plantDate}</p>
-                    <p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>
-                    <p><span>Ideal water per week:</span> {plant.idealWater} inches</p>
-                    <p><span>Ideal sun:</span> {plant.idealSun} sun</p>
+                    {plant.name.length ? (<h3>{plant.name}</h3>) : (<h3>N/A</h3>)}
+                    {plant.plantDate.length ? (<p><span>You planted on:</span> {plant.plantDate}</p>) : (<p><span>You planted on:</span> N/A</p>)}
+                    {plant.growTime.length ? (<p><span>Days to Harvest:</span> {plant.growTime} days, on average</p>) : (<p><span>Days to Harvest:</span> N/A </p>)}
+                    {plant.idealWater.length ? (<p><span>Ideal water per week:</span> {plant.idealWater} inches</p>) : (<p><span>Ideal water per week:</span> N/A</p>)}
+                    {plant.idealSun.length ? (<p><span>Ideal sun:</span> {plant.idealSun} sun</p>) : (<p><span>Ideal sun:</span> N/A</p>)}
                     <button className="list-button" onClick={() => this.props.deletePlant(plant.id)}>Delete Plant</button>
                     <EditPlantModal 
                         id={plant.id} // yes, this is a technically a prop-drill - I was drawing a blank on other ways to push the id to the respective component. Hopefully this doesn't violate the spirit of the project.
