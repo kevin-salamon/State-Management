@@ -3,7 +3,7 @@ import './headerstyle.css';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchPlants } from '../../actions/plantActions';
+import { fetchPlants, loadPlants } from '../../actions/plantActions';
 import NewPlantModal from './NewPlantModal';
 
 class Header extends Component {
@@ -13,7 +13,7 @@ class Header extends Component {
     }
 
     saveStorage = () => {
-        localStorage.setItem(`state`, `[${this.props.plants.map((plant) => 
+        localStorage.setItem(`state`, `${this.props.plants.map((plant) => 
             `{
             id: ${plant.id},
             name: ${plant.name},
@@ -23,9 +23,14 @@ class Header extends Component {
             idealSun: ${plant.idealSun},
             picture: ${plant.picture}
             }`   
-        )}]`);
-        const test = localStorage.getItem(`state`);
-        console.log(test);
+        )}`);
+    }
+
+    loadStorage = () => {
+        const data = localStorage.getItem(`state`);
+        let formattedData = data.split("{")
+        console.log(formattedData);
+        this.props.loadPlants(formattedData);
     }
 
     render() {
@@ -36,18 +41,18 @@ class Header extends Component {
                 </div>
                 <div className="links">
                     <Link to="/" className="link-box">
-                    <   button className="header-button">Home</button>
+                    <   button className="header-button-link">Home</button>
                     </Link>
                     <Link to="/table" className="link-box">
-                        <button className="header-button">Table</button>
+                        <button className="header-button-link">Table</button>
                     </Link>
                     <Link to="/chart" className="link-box">
-                    <button className="header-button">Chart</button>
+                    <button className="header-button-link">Chart</button>
                     </Link>
                 </div>
                 <div className="storage">
                     <button className="header-button" onClick={this.saveStorage}>Save Plants</button>
-                    <button className="header-button">Load Plants</button>
+                    <button className="header-button" onClick={this.loadStorage}>Load Plants</button>
                 </div>
                 <NewPlantModal />
             </nav>
@@ -58,10 +63,11 @@ class Header extends Component {
 Header.propTypes = {
     fetchPlants: PropTypes.func.isRequired,
     plants: PropTypes.array.isRequired,
+    loadPlants: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
     plants: state.plants.plants,
 });
 
-export default connect(mapStateToProps, { fetchPlants })(Header);
+export default connect(mapStateToProps, { fetchPlants, loadPlants })(Header);

@@ -17,8 +17,8 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Abril Fatface', cursive;
-    border: 2px solid black;
+    font-family: 'Libre Baskerville', serif;
+    border: 1px solid black;
     margin: 0 auto;
 }
 
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Libre Baskerville', serif;
     border: 2px solid black;  
     margin: 2px;
 }

@@ -7,12 +7,12 @@
     flex-wrap: wrap;
     justify-content: center; 
     text-align: center;
-    background-color: #FAB3A9;
+    background-color: #ec6553;
     align-items: center;
     color: white;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Lato', sans-serif;
     font-size: 2.0em;
-    text-shadow: 1px 2px black;
+    text-shadow: 2px 1px black;
     font-weight: 600;
 }
 
@@ -32,7 +32,7 @@
     border-radius: 2px;
     justify-content: center;
     align-items: center;
-    background-color: #FAB3A9;
+    background-color: #ec6553;
     border: 1px solid rgb(153, 153, 153);
     border-radius: 12px;
 }
@@ -55,12 +55,14 @@
 }
 
 .plant-container h3 {
-    font-family: 'Abril Fatface', cursive;
-    letter-spacing: 0.025em;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.9em;
+    font-weight: 800;
+    letter-spacing: 0.01em;
     justify-self: center;
     align-self: center;
     color: black;
-    text-shadow: 2px 2px rgb(189, 189, 189);
+    text-decoration: underline;
 }
 
 .plant-container p {
@@ -85,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Libre Baskerville', serif;
     border: 2px solid black;
     background-color: #463239;
     color: white;
