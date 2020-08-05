@@ -8,9 +8,9 @@ import './modalstyle.css';
 class EditPlantModal extends Component {
     
     constructor(props){
-        super(props);
+        super(props);      // see Landing.js comment, line 37
 
-        const propIdRender = this.props.id; // this is where we drilled the id props from Landing
+        const propIdRender = this.props.id; 
         const plantItem = this.props.plants.find(plant => plant.id === propIdRender);
 
         this.state = {
