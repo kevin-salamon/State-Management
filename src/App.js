@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './components/Landing/Landing';
 import Table from './components/Table/Table';
 import Chart from './components/Chart/Chart';
@@ -9,17 +9,18 @@ import store from './store';
 
 function App() { 
   return (
-    <HashRouter basename={process.env.PUBLIC_URL + '/'}>
+    <Router>
       <React.Fragment>
         <Provider store={store}>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route path="/table" component={Table} />
-            <Route path="/chart" component={Chart} />
+            <Route exact path="/State-Management" component={Landing} />
+            <Route exact path="/table" component={Table} />
+            <Route exact path="/chart" component={Chart} />
           </Switch>
         </Provider>
       </React.Fragment>
-    </HashRouter>
+    </Router>
   );
 }
 
