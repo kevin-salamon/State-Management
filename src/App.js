@@ -9,7 +9,7 @@ import store from './store';
 
 function App() { 
   return (
-    <HashRouter basename='/State-Management'>
+    <HashRouter basename={process.env.PUBLIC_URL + '/'}>
       <React.Fragment>
         <Provider store={store}>
           <Switch>
