@@ -1,4 +1,4 @@
-import { FETCH_PLANTS, NEW_PLANT, EDIT_PLANT, DELETE_PLANT } from './types';
+import { FETCH_PLANTS, NEW_PLANT, EDIT_PLANT, DELETE_PLANT, LOAD_PLANTS } from './types';
 
 export function fetchPlants() {  
     return dispatch => {  
@@ -33,4 +33,13 @@ export function deletePlant(id) {
             payload: id
         });  
     }  
-}; 
+};
+
+export function loadPlants(data) {
+    return dispatch => {  
+        return dispatch({  
+            type: LOAD_PLANTS,  
+            payload: data
+        });  
+    }    
+};

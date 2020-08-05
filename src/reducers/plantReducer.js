@@ -1,4 +1,4 @@
-import { FETCH_PLANTS, NEW_PLANT, EDIT_PLANT, DELETE_PLANT } from '../actions/types';
+import { FETCH_PLANTS, NEW_PLANT, EDIT_PLANT, DELETE_PLANT, LOAD_PLANTS } from '../actions/types';
 import initialStateJSON from '../initialState.json';
 
 const initialState = {
@@ -34,7 +34,12 @@ export default function(state = initialState, action) {
             return {    
                 ...state,    
                 plants: state.plants.filter(item => item.id !== action.payload)    
-            };  
+            };
+        case LOAD_PLANTS:
+            return {
+                ...state,
+                plants: action.payload
+            }
         default:
             return state; 
     }
