@@ -38,7 +38,7 @@ class EditPlantModal extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const propsId = this.props.id; // same as line 13
+        const propsId = this.props.id;
         const editedPlant = {
             id: propsId,
             name: this.state.name,
