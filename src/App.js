@@ -4,6 +4,7 @@ import Landing from './components/Landing/Landing';
 import Table from './components/Table/Table';
 import Chart from './components/Chart/Chart';
 import { Provider } from 'react-redux';
+import Header from './components/reusables/Header';
 
 import store from './store';
 
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <React.Fragment>
         <Provider store={store}>
+          <Header />
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/State-Management" component={Landing} />
