@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPlants, deletePlant } from '../../actions/plantActions';
-import Header from '../reusables/Header';
 import EditPlantModal from '../reusables/EditPlantModal';
 import './landingstyle.css';
 
@@ -42,7 +41,6 @@ class Landing extends Component {
 
         return(
             <>
-            <Header />
             <h1 className="top-flex-container">Welcome back! Here are the crops you've planted...</h1>
 
             <div className="flex-container">

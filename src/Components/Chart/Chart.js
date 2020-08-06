@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import Header from '../reusables/Header';
 import { HorizontalBar } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPlants } from '../../actions/plantActions';
 import styles from './Chart.module.css';
-// import './chartstyle.css';
 
 class Chart extends Component {
 
@@ -15,7 +13,13 @@ class Chart extends Component {
         const barChart = 
                 <HorizontalBar
                     data = {{
-                        labels: this.props.plants.map(plant => plant.name),
+                        labels: this.props.plants.map(function(plant) {
+                            if (plant.name.length) {
+                                return plant.name;
+                            } else {
+                                return "N/A"
+                            }
+                        }),
                         datasets: [{
                             label: 'Days',
                             backgroundColor: '#FAB3A9',
@@ -53,8 +57,7 @@ class Chart extends Component {
 
         return(
             <>
-            <Header />
-            <h1 className={styles.top}>Chart of Growing Times</h1>
+            <h1 className={styles.top}>Growth Chart</h1>
             <div>
                 <div className={styles.container}>
                     {barChart}
