@@ -94,6 +94,12 @@
     color: white;
 }
 
+.filter-input {
+    height: 30px;
+    font-size: 0.7em;
+    margin: 0px;
+}
+
 @media screen and (max-width: 559px) {
 
     .top-flex-container {

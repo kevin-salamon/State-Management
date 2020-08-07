@@ -7,13 +7,26 @@ import './landingstyle.css';
 
 class Landing extends Component {
 
+    state = {
+        search: ""
+    }
+
     componentDidMount() {  
         this.props.fetchPlants();  
     }
 
+    handleInputChange = (event) => {
+        let searchTerm = event.target.value;
+        this.setState({search: searchTerm});
+    }
+
     render() {
 
-        const plantItems = this.props.plants.map(plant => (
+        let filteredPlants = this.props.plants.filter((plant) => {
+            return plant.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        });
+
+        const plantItems = filteredPlants.map(plant => (
             <div className="plant-flex-container">
                 <div className="image-container" style={{background: `linear-gradient(
                         rgba(0, 0, 0, 0.0),
@@ -41,7 +54,17 @@ class Landing extends Component {
 
         return(
             <>
-            <h1 className="top-flex-container">Welcome back! Here are the crops you've planted...</h1>
+            <div className="top-flex-container">Welcome back! Here are the crops you've planted...
+            <form className="form">
+                            <input
+                                value={this.state.search}
+                                onChange={this.handleInputChange}
+                                type="text"
+                                placeholder="Filter Plants"
+                                className="filter-input"
+                            />
+            </form>
+            </div>
 
             <div className="flex-container">
                 {plantItems}
