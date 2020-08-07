@@ -10,15 +10,15 @@ A sample gardening app intended to test the limits of Redux to create a full app
             return {    
                 ...state,    
                 plants: state.plants.map(    
-                    (content, i) => content.id === action.payload.id ? {...content,
+                    (plant) => plant.id === action.payload.id ? {...plant,
                         id: action.payload.id, 
                         name: action.payload.name, 
                         plantDate : action.payload.plantDate, 
                         growTime: action.payload.growTime, 
                         idealWater: action.payload.idealWater, 
                         idealSun: action.payload.idealSun, 
-                        picture: action.payload.picture } : content)
-            };
+                        picture: action.payload.picture } : plant)    
+            };   
 ```
 
 ## Table of Contents
