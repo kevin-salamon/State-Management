@@ -158,7 +158,7 @@ EditPlantModal.propTypes = {
 }
 
 const mapStateToProps = state => ({
-    plants: state.plants.plants,
+    plants: state.items.plants,
 });
 
 export default connect(mapStateToProps, { editPlant, fetchPlants })(EditPlantModal);

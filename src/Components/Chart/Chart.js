@@ -72,12 +72,10 @@ class Chart extends Component {
 Chart.propTypes = {
     fetchPlants: PropTypes.func.isRequired,
     plants: PropTypes.array.isRequired,
-    newPlant: PropTypes.object
 }
 
 const mapStateToProps = state => ({
-    plants: state.plants.plants,
-    newPlant: state.plants.plant
+    plants: state.items.plants
 });
 
 export default connect(mapStateToProps, { fetchPlants })(Chart);
