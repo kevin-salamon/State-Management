@@ -4,15 +4,29 @@ import { connect } from 'react-redux';
 import { fetchPlants, deletePlant } from '../../actions/plantActions';
 import EditPlantModal from '../reusables/EditPlantModal';
 import './landingstyle.css';
+import axios from 'axios';
 
 class Landing extends Component {
 
     state = {
-        search: ""
+        search: "",
+        temp: undefined,
+        weather: undefined,
     }
 
     componentDidMount() {  
-        this.props.fetchPlants();  
+        this.props.fetchPlants();
+        this.fetchWeather();
+    }
+    
+    fetchWeather = () => {
+        axios.get('https://api.openweathermap.org/data/2.5/weather?q=Long%20Valley&units=imperial&appid=a0a7ba2d11c89621064f9cd380b6e76e')
+            .then(response => {
+                console.log("Weather Data from OpenWeatherAPI", response.data);
+                this.setState({ temp: (response.data.main.temp).toFixed(1) });
+                this.setState({ weather: response.data.weather[0].description });
+            })
+            .catch(err => console.log(err));
     }
 
     handleInputChange = (event) => {
@@ -54,16 +68,16 @@ class Landing extends Component {
 
         return(
             <>
-            <div className="top-flex-container">Welcome back! Here are the crops you've planted...
-            <form className="form">
-                            <input
-                                value={this.state.search}
-                                onChange={this.handleInputChange}
-                                type="text"
-                                placeholder="Filter Plants"
-                                className="filter-input"
-                            />
-            </form>
+            <div className="top-flex-container-landing">Welcome back! It is currently {this.state.temp}°F ({this.state.weather}).
+                <form className="form">
+                                <input
+                                    value={this.state.search}
+                                    onChange={this.handleInputChange}
+                                    type="text"
+                                    placeholder="Filter Plants"
+                                    className="filter-input"
+                                />
+                </form>
             </div>
 
             <div className="flex-container">

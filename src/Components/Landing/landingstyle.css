@@ -1,7 +1,7 @@
-.top-flex-container {
+.top-flex-container-landing {
     margin: 1%;
     margin-bottom: 0%;
-    padding: 2% 20%;
+    padding: 1% 20%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -14,6 +14,10 @@
     font-size: 2.0em;
     text-shadow: 2px 1px black;
     font-weight: 600;
+}
+
+.filter-input {
+    font-family: 'Lusitana', serif;
 }
 
 .flex-container {
