@@ -10,7 +10,13 @@ class NewPlantModal extends Component {
     constructor(){
         super();
         this.state = {
-            showHide : false
+            showHide: false,
+            name: "",
+            plantDate: "",
+            growTime: "",
+            idealWater: "",
+            idealSun: "",
+            picture: ""
         }
     }
 
@@ -18,22 +24,36 @@ class NewPlantModal extends Component {
         this.setState({ showHide: !this.state.showHide })
     }
 
+    onChange = (event) => {
+        this.setState({[event.target.name]: event.target.value})
+    }
+
+    clearLocalState = () => {
+        this.setState({name: ""});
+        this.setState({plantDate: ""});
+        this.setState({growTime: ""});
+        this.setState({idealWater: ""});
+        this.setState({idealSun: ""});
+        this.setState({picture: ""});
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         const newPlant = {
             id: Date.now(),
-            name: this.getName.value,
-            plantDate: this.getPlantDate.value,
-            growTime: this.getGrowTime.value,
-            idealWater: this.getWater.value,
-            idealSun: this.getSun.value,
-            picture: this.getPicture.value
+            name: this.state.name,
+            plantDate: this.state.plantDate,
+            growTime: this.state.growTime,
+            idealWater: this.state.idealWater,
+            idealSun: this.state.idealSun,
+            picture: this.state.picture
         };
 
         console.log(`Adding plant to state: ${newPlant.name}`);
         this.props.createPlant(newPlant);
         
         this.setState({ showHide: false });
+        this.clearLocalState();
     }
 
     render() {
@@ -53,8 +73,10 @@ class NewPlantModal extends Component {
                                 <label>Name: </label><br/>
                                 <input
                                     className="input"
-                                    ref={(input)=>this.getName = input}
+                                    onChange={this.onChange}
+                                    value={this.state.name}
                                     type="text"
+                                    name="name"
                                     placeholder="Name"
                                 />
                             </div>
@@ -62,8 +84,10 @@ class NewPlantModal extends Component {
                                 <label>Planting Date: </label><br/>
                                 <input
                                     className="input"
-                                    ref={(input)=>this.getPlantDate = input}
+                                    onChange={this.onChange}
+                                    value={this.state.plantDate}
                                     type="text"
+                                    name="plantDate"
                                     placeholder="Planting Date"
                                 />
                             </div>
@@ -71,7 +95,9 @@ class NewPlantModal extends Component {
                                 <label>Days to Harvest: </label><br/>
                                 <input
                                     className="input"
-                                    ref={(input)=>this.getGrowTime = input}
+                                    onChange={this.onChange}
+                                    value={this.state.growTime}
+                                    name="growTime"
                                     type="text"
                                     placeholder="Days to Harvest"
                                 />
@@ -80,7 +106,9 @@ class NewPlantModal extends Component {
                                 <label>Ideal Water: </label><br/>
                                 <input
                                     className="input"
-                                    ref={(input)=>this.getWater = input}
+                                    onChange={this.onChange}
+                                    value={this.state.idealWater}
+                                    name="idealWater"
                                     type="text"
                                     placeholder="Ideal Water"
                                 />
@@ -89,7 +117,9 @@ class NewPlantModal extends Component {
                                 <label>Ideal Sun: </label><br/>
                                 <input
                                     className="input"
-                                    ref={(input)=>this.getSun = input}
+                                    onChange={this.onChange}
+                                    value={this.state.idealSun}
+                                    name="idealSun"
                                     type="text"
                                     placeholder="Ideal Sun"
                                 />
@@ -100,7 +130,9 @@ class NewPlantModal extends Component {
                                     rows="3"
                                     style={{height: "65px"}}
                                     className="input"
-                                    ref={(input)=>this.getPicture = input}
+                                    onChange={this.onChange}
+                                    value={this.state.picture}
+                                    name="picture"
                                     type="text"
                                     placeholder="Full Link to Picture"
                                 />
