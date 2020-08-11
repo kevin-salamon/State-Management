@@ -1,9 +1,21 @@
 import { FETCH_PLANTS, NEW_PLANT, EDIT_PLANT, DELETE_PLANT, LOAD_PLANTS } from '../actions/types';
 import initialStateJSON from '../initialState.json';
+let initialState;
 
-const initialState = {
-    plants: initialStateJSON,
+function checkLocalStorage() {
+    let data = JSON.parse(localStorage.getItem(`state`));
+    if (!data) {
+        initialState = {
+            plants: initialStateJSON,
+        }
+    } else {
+        initialState = {
+            plants: data
+        }
+    }
 }
+
+checkLocalStorage();
 
 export default function(state = initialState, action) {
     switch(action.type) {
