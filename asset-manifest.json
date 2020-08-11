@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/State-Management/static/css/main.86148f8c.chunk.css",
-    "main.js": "/State-Management/static/js/main.ba021ea8.chunk.js",
-    "main.js.map": "/State-Management/static/js/main.ba021ea8.chunk.js.map",
+    "main.js": "/State-Management/static/js/main.210b8512.chunk.js",
+    "main.js.map": "/State-Management/static/js/main.210b8512.chunk.js.map",
     "runtime-main.js": "/State-Management/static/js/runtime-main.53d708a7.js",
     "runtime-main.js.map": "/State-Management/static/js/runtime-main.53d708a7.js.map",
     "static/js/2.fc0d38c4.chunk.js": "/State-Management/static/js/2.fc0d38c4.chunk.js",
     "static/js/2.fc0d38c4.chunk.js.map": "/State-Management/static/js/2.fc0d38c4.chunk.js.map",
     "index.html": "/State-Management/index.html",
-    "precache-manifest.aa5884ed598cc5bcd5e9a3deadb51b46.js": "/State-Management/precache-manifest.aa5884ed598cc5bcd5e9a3deadb51b46.js",
+    "precache-manifest.44ac1df61f1576e74e0db3b12542502f.js": "/State-Management/precache-manifest.44ac1df61f1576e74e0db3b12542502f.js",
     "service-worker.js": "/State-Management/service-worker.js",
     "static/css/main.86148f8c.chunk.css.map": "/State-Management/static/css/main.86148f8c.chunk.css.map",
     "static/js/2.fc0d38c4.chunk.js.LICENSE.txt": "/State-Management/static/js/2.fc0d38c4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.53d708a7.js",
     "static/js/2.fc0d38c4.chunk.js",
     "static/css/main.86148f8c.chunk.css",
-    "static/js/main.ba021ea8.chunk.js"
+    "static/js/main.210b8512.chunk.js"
   ]
 }
